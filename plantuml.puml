@@ -1,0 +1,39 @@
+@startuml API Calling
+' actor Local #Red
+' control Cloud
+' participant Terminal  
+' participant "test test test test"
+' Local -> Cloud : Calling API
+' Cloud --> Local : Response (Response code & Data)
+
+' Terminal --> Local : If Reponse code in 200
+' Local -> Terminal : Print Response code of the API calling
+' Local -> Terminal : Else print "Failed to fetch Response code of the API"
+' Terminal --> Local : If API return some data
+' Local -> Terminal : Print the data of the API
+' Local -> Terminal : Else print "Failed to fetch data from the API"
+
+' participant first order 30
+' participant middle order 20
+' participant last order 50
+' participant tete order 40
+' participant rara order 10
+
+' participant test as a 
+' skinparam responseMessageBelowArrow true
+' participant Bob order 10
+' participant Alice order 20
+' Bob -> Alice : hello
+' Bob <- Alice : ok
+
+
+Alice -> Bob : message 1
+Alice -> Bob : message 2
+newpage
+Alice -> Bob : message 3
+Alice -> Bob : message 4
+newpage A title for the\nlast page
+Alice -> Bob : message 5
+Alice -> Bob : message 6
+
+@enduml
